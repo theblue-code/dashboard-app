@@ -54,8 +54,8 @@ export default function Register() {
     
 
     return (
-        <section className="sm:grid gap-4 grid-cols-2">
-            <h1 className="flex flex-col items-center pt-10 text-2xl text-gray-900 font-extrabold">Welcome To Our Dashboard</h1>
+        <section>
+            <h1 className="flex flex-col items-center pt-10 text-2xl text-gray-900 font-extrabold">Welcome To Our Dashboard</h1> 
             <div className="flex flex-col items-center justify-center px-6 py-10">
                 {emailExistError && <ErrorToast />}
                 <div className="w-full rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
@@ -116,13 +116,6 @@ export default function Register() {
                         </form>
                     </div>
                 </div>
-            </div>
-            <div className="hidden sm:p-10 lg:flex">
-                <img
-                    width={400}
-                    src="https://images.unsplash.com/photo-1589492477829-5e65395b66cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
-                    alt="mockup"
-                />
             </div>
         </section>
     )
