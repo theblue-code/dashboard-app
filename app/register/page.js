@@ -38,7 +38,7 @@ export default function Register() {
     }
 
     if(userData.name) {
-        axios.post("http://localhost:5000/users/register",userData)
+        axios.post("https://dashboard-api-self.vercel.app/users/register",userData)
             .then((data) => {
                 router.push(`/profile/${data.data._id}`)
             })

@@ -25,7 +25,7 @@ export default function Login() {
     }
 
     if(userData.email) {
-        axios.post("http://localhost:5000/users/login",userData)
+        axios.post("https://dashboard-api-self.vercel.app/users/login",userData)
             .then(data => router.push(`/profile/${data.data._id}`))
             .catch(() => setError(true))
 

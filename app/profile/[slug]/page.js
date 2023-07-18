@@ -4,7 +4,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 
 async function fetchUser(id) {
-    const userResponse = await fetch(`http://localhost:5000/users/${id}`)
+    const userResponse = await fetch(`https://dashboard-api-self.vercel.app/users/${id}`)
     if (!userResponse.ok) return undefined
     return userResponse.json()
 }
