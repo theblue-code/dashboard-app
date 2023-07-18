@@ -26,7 +26,7 @@ export default function Login() {
 
     if(userData.email) {
         axios.post("https://dashboard-api-self.vercel.app/users/login",userData)
-            .then(data => router.push(`/profile/${data.data._id}`))
+            .then(data => router.push("/profile/" + data.data._id))
             .catch(() => setError(true))
 
         setUserData({
@@ -44,7 +44,7 @@ export default function Login() {
                         <h1 className="text-xl font-bold leading-tight tracking-tight md:text-2xl text-white">
                             Log In
                         </h1>
-                        <form action="#" onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+                        <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                             <div>
                                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-white">Your email</label>
                                 <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Your Email" required />

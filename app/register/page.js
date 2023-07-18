@@ -40,7 +40,7 @@ export default function Register() {
     if(userData.name) {
         axios.post("https://dashboard-api-self.vercel.app/users/register",userData)
             .then((data) => {
-                router.push(`/profile/${data.data._id}`)
+                router.push("/profile/" + data.data._id)
             })
             .catch((err) => {
                 setEmailExistError(true)
